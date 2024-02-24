@@ -50,3 +50,47 @@
 .login-form-container .error-message {
     color: #ff4444;
 }
+
+.territories-page {
+    padding: 32px;
+}
+
+.territories-page-header {
+    margin-bottom: 2rem;
+}
+
+.territories-page-header h1 {
+    margin-bottom: 0.5rem;
+}
+
+.territories-container {
+    border: 1px solid #bbb;
+    margin-block: 1rem;
+    padding: 16px;
+}
+
+.territory-list-item {
+    list-style: none;
+    margin-left: 24px;
+    margin-block: 0.5rem;
+}
+
+.territory-title::before {
+    content: "\25B6";
+    display: inline-block;
+    margin-right: 1rem;
+}
+
+.territory-title.open::before {
+    rotate: 90deg;
+}
+
+.territory-title.empty::before {
+    content: ''
+}
+
+.territory-title {
+    user-select: none;
+    cursor: pointer;
+    display: inline-block;
+}

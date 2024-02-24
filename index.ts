@@ -6,6 +6,7 @@ const port = 10000;
 const app = express();
 
 import AuthRoutes from './routes/authRoutes';
+import TerritoryRoutes from './routes/territoryRoutes';
 
 register(app).then(() => {
   // Middleware
@@ -14,6 +15,7 @@ register(app).then(() => {
 
   // Routes
   app.use('/', AuthRoutes);
+  app.use('/', TerritoryRoutes);
 
   app.listen(port, () => {
     console.log(`App is listening on port ${port}`);
