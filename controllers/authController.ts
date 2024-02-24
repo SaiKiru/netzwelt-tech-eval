@@ -22,6 +22,11 @@ async function login(req: Request, res: Response) {
   }
 }
 
+function renderLoginForm(req: Request, res: Response) {
+  res.render('login');
+}
+
 export default {
   login,
+  renderLoginForm,
 };
