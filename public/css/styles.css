@@ -46,3 +46,7 @@
     margin-block: 0.5rem;
     margin-left: auto;
 }
+
+.login-form-container .error-message {
+    color: #ff4444;
+}

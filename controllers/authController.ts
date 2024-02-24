@@ -16,9 +16,9 @@ async function login(req: Request, res: Response) {
   if (apiResponse.status === 200) {
     res.send('Login successful!');
   } else if (apiResponse.status === 404) {
-    res.send('Invalid credentials!');
+    res.render('login', { error: 'Invalid credentials!' });
   } else {
-    res.send('Unknown error. Try again later');
+    res.render('login', { error: 'Unknown error. Try again later' });
   }
 }
 

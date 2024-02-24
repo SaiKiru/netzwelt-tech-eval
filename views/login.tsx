@@ -1,6 +1,6 @@
 import { Head } from '@react-ssr/express';
 
-export default function Login() {
+export default function Login({ error }) {
   return (
     <>
       <Head>
@@ -28,6 +28,12 @@ export default function Login() {
                 name="password"
                 id="login-field-password" />
             </div>
+
+            {error &&
+              <div className='error-message'>
+                {error}
+              </div>
+            }
 
             <button>Login</button>
           </form>
