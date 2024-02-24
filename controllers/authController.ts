@@ -14,7 +14,7 @@ async function login(req: Request, res: Response) {
   });
 
   if (apiResponse.status === 200) {
-    res.send('Login successful!');
+    res.redirect('/home/index');
   } else if (apiResponse.status === 404) {
     res.render('login', { error: 'Invalid credentials!' });
   } else {
