@@ -25,7 +25,11 @@ async function login(req: Request, res: Response) {
 }
 
 function renderLoginForm(req: Request, res: Response) {
-  res.render('login');
+  if (req.session['isLoggedIn']) {
+    res.redirect('/home/index');
+  } else {
+    res.render('login');
+  }
 }
 
 export default {
